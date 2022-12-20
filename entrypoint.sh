@@ -1,20 +1,26 @@
 #! /bin/bash
 
 
-options=""
+set -x
+set -e
 
 if [[ $5==1 ]];then
-    options = "$options --translate "
+    options="$options --translate "
 fi
 
 if [[ $6==1 ]];then
-    options = "$options --add-subtitles "
+    options="$options --add-subtitles "
 fi
 
 
 
 
 
-bash -c "syncYB --bilibili-accession-token $1 --bilibili-refresh-token $2 --baidu-translation-appid $3 --baidu-translation-appkey $4 $options --outdir $6 --youtube-config $7 --update-number $8"
+syncYB --bilibili-accession-token $INPUT_BILIBILI_ACCESSION_TOKEN \
+        --bilibili-refresh-token $INPUT_BILIBILI_REFRESH_TOKEN \
+        --baidu-translation-appid $INPUT_BAIDU_TRANSLATION_APPID \
+        --baidu-translation-appkey $INPUT_BAIDU_TRANSLATION_APPKEY $options \
+        --outdir $INPUT_OUTDIR \
+        --youtube-config $INPUT_CONFIG --update-number $INPUT_UPDATE_NUMBER
 
 
