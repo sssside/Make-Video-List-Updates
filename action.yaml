@@ -1,0 +1,58 @@
+# action.yml
+name: 'Tobilibili'
+description: 'Testing if the bilibili.com were uploadable'
+inputs:
+  bilibili_accession_token:  # id of input
+    description: 'Bilibili Accession Token'
+    required: true
+    default: ''
+  bilibili_refresh_token:  # id of input
+    description: 'Bilibili Refresh Token'
+    required: true
+    default: ''
+  baidu_translation_appid:  # id of input
+    description: 'Baidu Translation APPID'
+    required: true
+    default: ''
+  baidu_translation_appkey:  # id of input
+    description: 'Baidu Translation APPKEY'
+    required: true
+    default: ''
+  translate:  # id of input
+    description: 'If translate title into Chinese'
+    required: true
+    default: 2
+  add_subtitles:  # id of input
+    description: 'If add subtitles to the video'
+    required: true
+    default: 2
+  outdir:  # id of input
+    description: 'OUTDIR'
+    required: true
+    default: './temp_dir'
+  config:  # id of input
+    description: 'config'
+    required: true
+    default: ''
+  update_number:  # id of input
+    description: 'update-number'
+    required: true
+    default: 5
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.bilibili_accession_token }}
+    - ${{ inputs.bilibili_refresh_token }}
+    - ${{ inputs.baidu_translation_appid }}
+    - ${{ inputs.baidu_translation_appkey }}
+    - ${{ inputs.translate }}
+    - ${{ inputs.add_subtitles }}
+    - ${{ inputs.outdir }}
+    - ${{ inputs.config }}
+    - ${{ inputs.update_number }}
+
+

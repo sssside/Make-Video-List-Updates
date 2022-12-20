@@ -1,0 +1,28 @@
+name: tiny-tets
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Try Try
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: ToBilibili action step
+        uses: ./
+        id: hello
+        with:
+          bilibili_accession_token: ${{ secrets.BL_ACC_TOKEN_AUG }}
+          bilibili_refresh_token: ${{ secrets.BL_REF_TOKEN_AUG }} 
+          baidu_translation_appid: ${{ secrets.BD_APPID }} 
+          baidu_translation_appkey: ${{ secrets.BD_APPKEY }} 
+          translate: 1
+          add_subtitles: 1 
+          outdir: ./temp_dir
+          config: ./test.yaml
+          update_number: 1
+
