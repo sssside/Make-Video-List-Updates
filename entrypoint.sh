@@ -4,11 +4,11 @@
 set -x
 set -e
 
-if [ "$5"=="1" ];then
+if [ $5 -eq 1 ];then
     options="$options --translate "
 fi
 
-if [ "$6"=="1" ];then
+if [ $6 -eq 1 ];then
     options="$options --add-subtitles "
 fi
 
