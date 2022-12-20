@@ -24,3 +24,5 @@ syncYB --bilibili-accession-token $INPUT_BILIBILI_ACCESSION_TOKEN \
         --youtube-config $INPUT_CONFIG --update-number $INPUT_UPDATE_NUMBER
 
 
+ls -R ./
+
