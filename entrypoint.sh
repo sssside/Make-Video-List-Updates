@@ -4,16 +4,13 @@
 set -x
 set -e
 
-if [[ $5==1 ]];then
+if [ "$5"=="1" ];then
     options="$options --translate "
 fi
 
-if [[ $6==1 ]];then
+if [ "$6"=="1" ];then
     options="$options --add-subtitles "
 fi
-
-
-
 
 
 syncYB --bilibili-accession-token $INPUT_BILIBILI_ACCESSION_TOKEN \
