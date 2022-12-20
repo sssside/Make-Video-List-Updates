@@ -6,31 +6,35 @@ on:
     - cron: "0 7 * * *"
 
 jobs:
-  update_my_repo:
+  updating_beauty:
     runs-on: ubuntu-latest
+    name: Updating beauty videos
     steps:
-      - uses: actions/setup-python@v4
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: ToBilibili action step
+        uses: ./
+        id: hello
         with:
-          python-version: "3.10"
-      - uses: actions/checkout@v3
-      - name: Get Image
+          bilibili_accession_token: ${{ secrets.BL_ACC_TOKEN_AUG }}
+          bilibili_refresh_token: ${{ secrets.BL_REF_TOKEN_AUG }} 
+          baidu_translation_appid: ${{ secrets.BD_APPID }} 
+          baidu_translation_appkey: ${{ secrets.BD_APPKEY }} 
+          translate: 1
+          add_subtitles: 1 
+          outdir: ./temp_dir
+          config: ./beauty.yaml
+          update_number: 4
+      - name: remove no use file
         run: |
-          docker pull btrspg/to2bili:dev
-      - name: Update config
-        run: |
-          docker run --rm -v $PWD/:/workspace btrspg/to2bili:dev \
-              --bilibili-accession-token ${{ secrets.BL_ACC_TOKEN_AUG }} \
-              --bilibili-refresh-token ${{ secrets.BL_REF_TOKEN_AUG }} \
-              --baidu-translation-appid ${{ secrets.BD_APPID }} \
-              --baidu-translation-appkey ${{ secrets.BD_APPKEY }} \
-              --outdir temp_dird --youtube-config ./beauty.yaml
-          rm -rf temp_dird
+          rm -rf ./temp_dir
       - name: push to the remote
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add . ; git commit -m "auto update configuration"
+          git add . ; git commit -m "`date`: Beauty updates"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           branch: ${{ github.ref }}
+
