@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Get Image
         run: |
-          docker pull btrspg/yt-music-list:main
+          docker pull btrspg/to2bili:dev
       - name: Update config
         run: |
           docker run --rm -v $PWD/:/workspace btrspg/to2bili:dev \
