@@ -1,0 +1,36 @@
+name: beauty_updates
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * *"
+
+jobs:
+  update_my_repo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - uses: actions/checkout@v3
+      - name: Get Image
+        run: |
+          docker pull btrspg/to2bili:dev
+      - name: Update config
+        run: |
+          docker run --rm -v $PWD/:/workspace btrspg/to2bili:dev \
+              --bilibili-accession-token ${{ secrets.BL_ACC_TOKEN_AUG }} \
+              --bilibili-refresh-token ${{ secrets.BL_REF_TOKEN_AUG }} \
+              --baidu-translation-appid ${{ secrets.BD_APPID }} \
+              --baidu-translation-appkey ${{ secrets.BD_APPKEY }} \
+              --outdir temp_dird --youtube-config ./beauty.yaml
+          rm -rf temp_dird
+      - name: push to the remote
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add . ; git commit -m "auto update configuration"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.ref }}
