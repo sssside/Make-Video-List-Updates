@@ -18,12 +18,8 @@ jobs:
           docker pull btrspg/to2bili:dev
       - name: Update config
         run: |
-          docker run --rm -v $PWD/:/workspace btrspg/to2bili:dev \
-              --bilibili-accession-token ${{ secrets.BL_ACC_TOKEN_MUS }} \
-              --bilibili-refresh-token ${{ secrets.BL_REF_TOKEN_MUS }} \
-              --baidu-translation-appid ${{ secrets.BD_APPID }} \
-              --baidu-translation-appkey ${{ secrets.BD_APPKEY }} \
-              --outdir temp_dird --youtube-config ./music.yml
+          docker run --rm -v $PWD/:/workspace btrspg/to2bili:dev --bilibili-accession-token ${{ secrets.BL_ACC_TOKEN_MUS }} --bilibili-refresh-token ${{ secrets.BL_REF_TOKEN_MUS }} --baidu-translation-appid ${{ secrets.BD_APPID }} --baidu-translation-appkey ${{ secrets.BD_APPKEY }} --outdir temp_dird --youtube-config ./music.yml
+          ls -R ./
           rm -rf temp_dird
       - name: push to the remote
         run: |
