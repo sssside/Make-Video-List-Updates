@@ -59,37 +59,45 @@ youtube:
   title: 日本JK小姐姐
   uploaded: true
   url: https://www.youtube.com/@user-fj9pc7jt8s/videos
-- copyright: 1
+- avid: 989007214
+  bvid: BV1c44y1f7UA
+  copyright: 1
   desc: 分享分享每天的日常
   name: 你不会明白的，再怎么说你也不懂
   tag: 日常,NICE
   tid: 21
   title: 你不会明白的，再怎么说你也不懂
-  uploaded: false
+  uploaded: true
   url: https://www.youtube.com/@Otonanotin/videos
-- copyright: 1
+- avid: 734102014
+  bvid: BV1CD4y177pk
+  copyright: 1
   desc: Eunjipyo小姐姐
   name: Eunjipyo小姐姐
   tag: JK,日常
   tid: 21
   title: Eunjipyo小姐姐
-  uploaded: false
+  uploaded: true
   url: https://www.youtube.com/@Eunjipyo/videos
-- copyright: 1
+- avid: 391500902
+  bvid: BV1Bd4y1Y7z2
+  copyright: 1
   desc: 分享分享每天的日常
   name: MOMO RINA的日常
   tag: MOMO,RINA,每日更新
   tid: 21
   title: MOMO RINA的日常
-  uploaded: false
+  uploaded: true
   url: https://www.youtube.com/@momo_rina/videos
-- copyright: 1
+- avid: 606603975
+  bvid: BV1x84y1s7X4
+  copyright: 1
   desc: MOMO RINA的日常，不看会后悔
   name: MOMO RINA的日常-shorts
   tag: LYN,韩国小姐姐,日常
   tid: 21
   title: MOMO RINA的日常-shorts
-  uploaded: false
+  uploaded: true
   url: https://www.youtube.com/@momo_rina/shorts
 - copyright: 1
   desc: 分享分享每天的日常
