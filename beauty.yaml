@@ -62,7 +62,7 @@ youtube:
 - copyright: 1
   desc: 分享分享每天的日常
   name: 你不会明白的，再怎么说你也不懂
-  tag: 你不会明白的
+  tag: 日常,NICE
   tid: 21
   title: 你不会明白的，再怎么说你也不懂
   uploaded: false
@@ -94,7 +94,7 @@ youtube:
 - copyright: 1
   desc: 分享分享每天的日常
   name: slennseoah的频道
-  tag: slennseoah
+  tag: slennseoah,日常
   tid: 21
   title: slennseoah，提ta不会不好使吧
   uploaded: false
@@ -118,7 +118,7 @@ youtube:
 - copyright: 1
   desc: 日本JK小姐姐men，不看会后悔
   name: 日本JK小姐姐men
-  tag: 日本JK小姐姐
+  tag: 日本JK小姐姐,日常
   tid: 21
   title: 日本JK小姐姐men
   uploaded: false
@@ -126,7 +126,7 @@ youtube:
 - copyright: 1
   desc: 分享分享每天的日常
   name: 如果她给我加油，我会不喜欢运动
-  tag: 你不会明白的
+  tag: 日常,NICE
   tid: 21
   title: 如果她给我加油，我会不喜欢运动
   uploaded: false
@@ -142,7 +142,7 @@ youtube:
 - copyright: 1
   desc: 我都忘记了
   name: 日本美女图鉴
-  tag: 日本美女图鉴
+  tag: 日本美女图鉴,日常
   tid: 21
   title: 日本美女图鉴
   uploaded: false
