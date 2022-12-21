@@ -24,7 +24,7 @@ jobs:
           add_subtitles: 1 
           outdir: ./temp_dir
           config: ./beauty.yaml
-          update_number: 2
+          update_number: 4
       - name: remove no use file
         run: |
           rm -rf ./temp_dir
