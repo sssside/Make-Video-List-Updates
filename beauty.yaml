@@ -1,19 +1,23 @@
 youtube:
-- copyright: 1
+- avid: 691540021
+  bvid: BV1k24y1U7sQ
+  copyright: 1
   desc: 分享分享每天的日常
   name: Judy的日常
   tag: Judy,每日更新
   tid: 21
   title: Judy的日常
-  uploaded: false
+  uploaded: true
   url: https://www.youtube.com/@user-gw9ij9mr8z/videos
-- copyright: 1
+- avid: 606620650
+  bvid: BV1H84y1s7Ny
+  copyright: 1
   desc: LYN的每日日常，不看会后悔
   name: LYN的日常
   tag: 韩国小姐姐,日常
   tid: 21
   title: LYN的日常
-  uploaded: false
+  uploaded: true
   url: https://www.youtube.com/@ringo_lyn/videos
 - copyright: 1
   desc: 分享分享每天的日常
