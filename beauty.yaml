@@ -19,21 +19,25 @@ youtube:
   title: LYN的日常
   uploaded: true
   url: https://www.youtube.com/@ringo_lyn/videos
-- copyright: 1
+- avid: 649011121
+  bvid: BV1Ne4y1T7qK
+  copyright: 1
   desc: 分享分享每天的日常
   name: DJ MIU的频道
   tag: DJMIU,2KM2KM
   tid: 21
   title: DJ MIU，提2KM2KM不会不好使吧
-  uploaded: false
+  uploaded: true
   url: https://www.youtube.com/@miu_taeng229/videos
-- copyright: 1
+- avid: 734037990
+  bvid: BV1pD4y1771H
+  copyright: 1
   desc: 日本JK小姐姐-RIO
   name: 日本JK小姐姐-RIO
   tag: JK,日本小姐姐,日常
   tid: 21
   title: 日本JK小姐姐-RIO的日常
-  uploaded: false
+  uploaded: true
   url: https://www.youtube.com/@jste_rio/videos
 - copyright: 1
   desc: 分享分享每天的日常
