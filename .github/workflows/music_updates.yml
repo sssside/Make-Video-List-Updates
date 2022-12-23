@@ -17,8 +17,8 @@ jobs:
         uses: ./
         id: hello
         with:
-          bilibili_accession_token: ${{ secrets.BL_ACC_TOKEN_MUS }}
-          bilibili_refresh_token: ${{ secrets.BL_REF_TOKEN_MUS }} 
+          bilibili_accession_token: ${{ secrets.BL_ACC_TOKEN_AUG }}
+          bilibili_refresh_token: ${{ secrets.BL_REF_TOKEN_AUG }} 
           baidu_translation_appid: ${{ secrets.BD_APPID }} 
           baidu_translation_appkey: ${{ secrets.BD_APPKEY }} 
           translate: 0
