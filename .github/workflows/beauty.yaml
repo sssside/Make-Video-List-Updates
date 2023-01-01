@@ -2,8 +2,8 @@ name: beauty_updates
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 6,18 * * *"
+#   schedule:
+#     - cron: "0 6,18 * * *"
 
 jobs:
   updating_beauty:
